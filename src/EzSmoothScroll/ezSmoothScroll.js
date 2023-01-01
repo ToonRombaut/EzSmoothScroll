@@ -1,4 +1,3 @@
-import "./ezsmoothscroll.css"
 export default class EzSmoothScroll{
     /**
      * @param {Object} options
@@ -29,7 +28,52 @@ export default class EzSmoothScroll{
         this.isMoving = false;
         //events
         this.initEvents();
+        //css
+        this.addStyles();
         if(!options.disableRaf) requestAnimationFrame(this.render);
+    }
+    addStyles = () => {
+        const styles= 
+        `
+        *{
+            overscroll-behavior: none!important;
+            -webkit-overscroll-behavior: none!important;
+          }
+          html{
+            width:100%!important;
+            height:100%!important;
+            overflow:hidden!important;
+          }
+          body{
+            height:100%!important;
+            width:100%!important;
+            position:fixed!important;
+            overflow: hidden!important;
+            -webkit-overflow-scrolling: touch!important;
+          }
+          .scroll-container{
+            position:absolute!important;
+            left:0!important;
+            top:0.5px!important;
+            right:0!important;
+            bottom:0.5px!important;
+            width:100%!important;
+            height:100%!important;
+            overflow-y:scroll!important;
+            overscroll-behavior: contain!important;
+          }
+          .scroll-container .scroll-content{
+            position:fixed!important;
+            top:0!important;
+            left:0!important;
+            width:100%!important;
+            will-change: transform!important;
+          }
+        `;
+        const css = document.createElement('style');
+        if(css.styleSheet) css.styleSheet.cssText = styles;
+        else css.appendChild(document.createTextNode(styles))
+        document.getElementsByTagName("head")[0].appendChild(css);
     }
     render = () => {
         this.update();

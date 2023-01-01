@@ -12,14 +12,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "@toon.rombaut/EzSmoothScroll",\
+        "name": "@toon.rombaut/ez-smooth-scroll",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["@toon.rombaut/EzSmoothScroll", ["workspace:."]]\
+      ["@toon.rombaut/ez-smooth-scroll", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["vite", "virtual:d2909ccf0711db9f7c5dfecd3d3f412e2c6110ac9da519dc63e8e2d22a5cce97a7bdec09d2b2fc049a7ade31a8079ecde089648a35eca8b31f109f01a84e2b2d#npm:4.0.3"]\
+            ["vite", "virtual:216af1656fc41c5caa662b7c1d5c63241487292117f0e1ec6f1d38c7429933446c32db5d5e3080e2cfa1bf7a3fb49b899b00c81cc9c99c7171fa58b8ce9a09d4#npm:4.0.3"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -262,12 +262,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@toon.rombaut/EzSmoothScroll", [\
+      ["@toon.rombaut/ez-smooth-scroll", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@toon.rombaut/EzSmoothScroll", "workspace:."],\
-            ["vite", "virtual:d2909ccf0711db9f7c5dfecd3d3f412e2c6110ac9da519dc63e8e2d22a5cce97a7bdec09d2b2fc049a7ade31a8079ecde089648a35eca8b31f109f01a84e2b2d#npm:4.0.3"]\
+            ["@toon.rombaut/ez-smooth-scroll", "workspace:."],\
+            ["vite", "virtual:216af1656fc41c5caa662b7c1d5c63241487292117f0e1ec6f1d38c7429933446c32db5d5e3080e2cfa1bf7a3fb49b899b00c81cc9c99c7171fa58b8ce9a09d4#npm:4.0.3"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1378,10 +1378,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:d2909ccf0711db9f7c5dfecd3d3f412e2c6110ac9da519dc63e8e2d22a5cce97a7bdec09d2b2fc049a7ade31a8079ecde089648a35eca8b31f109f01a84e2b2d#npm:4.0.3", {\
-          "packageLocation": "./.yarn/__virtual__/vite-virtual-6b9651594c/0/cache/vite-npm-4.0.3-7db8e110fe-7df71d955f.zip/node_modules/vite/",\
+        ["virtual:216af1656fc41c5caa662b7c1d5c63241487292117f0e1ec6f1d38c7429933446c32db5d5e3080e2cfa1bf7a3fb49b899b00c81cc9c99c7171fa58b8ce9a09d4#npm:4.0.3", {\
+          "packageLocation": "./.yarn/__virtual__/vite-virtual-976ad46156/0/cache/vite-npm-4.0.3-7db8e110fe-7df71d955f.zip/node_modules/vite/",\
           "packageDependencies": [\
-            ["vite", "virtual:d2909ccf0711db9f7c5dfecd3d3f412e2c6110ac9da519dc63e8e2d22a5cce97a7bdec09d2b2fc049a7ade31a8079ecde089648a35eca8b31f109f01a84e2b2d#npm:4.0.3"],\
+            ["vite", "virtual:216af1656fc41c5caa662b7c1d5c63241487292117f0e1ec6f1d38c7429933446c32db5d5e3080e2cfa1bf7a3fb49b899b00c81cc9c99c7171fa58b8ce9a09d4#npm:4.0.3"],\
             ["@types/less", null],\
             ["@types/node", null],\
             ["@types/sass", null],\
