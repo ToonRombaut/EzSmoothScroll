@@ -20,7 +20,7 @@
     "name": "Toon Rombaut",
     "url": "https://toonrombaut.be"
   },
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
