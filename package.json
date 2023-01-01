@@ -1,0 +1,33 @@
+{
+  "name": "@toon.rombaut/EzSmoothScroll",
+  "version": "1.0.0",
+  "description": "A smoothscroll library that adds inertia scrolling to your website.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ez-smooth-scroll.umd.cjs",
+  "module": "./dist/ez-smooth-scroll.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ez-smooth-scroll.js",
+      "require": "./dist/ez-smooth-scroll.umd.cjs"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "email": "toon.rombaut@hotmail.com",
+    "name": "Toon Rombaut",
+    "url": "https://toonrombaut.be"
+  },
+  "license": "ISC",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "packageManager": "yarn@3.3.1"
+}
