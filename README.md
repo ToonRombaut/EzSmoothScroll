@@ -37,7 +37,7 @@ yarn add @toon.rombaut/EzSmoothScroll
 3. Import and initiaze in javascript
 ```javascript
 //import
-import EzSmoothScroll from "@toon.rombaut/EzSmoothScroll";
+import {EzSmoothScroll} from "@toon.rombaut/EzSmoothScroll";
 
 //Get your html elements
 const container = document.querySelector(".scroll-container");
