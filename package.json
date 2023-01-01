@@ -1,6 +1,6 @@
 {
-  "name": "@toon.rombaut/EzSmoothScroll",
-  "version": "1.0.0",
+  "name": "@toon.rombaut/ez-smooth-scroll",
+  "version": "0.0.1-beta.0",
   "description": "A smoothscroll library that adds inertia scrolling to your website.",
   "type": "module",
   "files": [
@@ -15,11 +15,7 @@
     }
   },
   "keywords": [],
-  "author": {
-    "email": "toon.rombaut@hotmail.com",
-    "name": "Toon Rombaut",
-    "url": "https://toonrombaut.be"
-  },
+  "author": "Toon Rombaut <toon.rombaut@hotmail.com> (https://toonrombaut.be)",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -29,5 +25,13 @@
   "devDependencies": {
     "vite": "^4.0.0"
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToonRombaut/EzSmoothScroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ToonRombaut/EzSmoothScroll/issues"
+  },
+  "homepage": "https://github.com/ToonRombaut/EzSmoothScroll#readme"
 }
