@@ -9,7 +9,8 @@ Fixes problems with appearing/disappearing browsers UI (ex. url section on Chrom
 - **Works on mobile browsers. No more problems with appearing/disappearing browser UI!**
 - Use your own external RAF loop if needed
 - Auto resize
-
+## Demo 
+[EzSmoothScroll demo](https://ez-smooth-scroll.netlify.app/).
 ## Installation
 ### npm
 ```sh
@@ -49,9 +50,12 @@ const ezSmoothScroll = new EzSmoothScroll({
     scrollContent: scrollContent,
     ease: 0.1,
     disableRaf: false
-})
+});
 ```
-
+4. If you don't need the smooth scrolling anymore, or you want to re-initialize, don't forget to use the destroy method on the current instance
+```javascript
+ezSmoothScroll.destroy();
+```
 ## Options
 
 | Parameter | Type | Required| Default | Description |
@@ -85,6 +89,37 @@ Methods that can be executed on the EzSmoothScroll instance.
 | setSize() | / | Manually resize the smooth scroll. |
 | update() | / | Manually update the scroll render. Useful if you use your own external RAF. |
 | scrollTo(target) | target - Number | Triggers scroll to the passed target scroll position. |
+| destroy | / | Destroy the eventlisteners inside the instance. Important to execute if you want to re-initialize or to increase performance when you don't need the instance anymore. |
+
+## External RAF
+You can use your own external RAF loop.
+
+```javascript
+//import
+import {EzSmoothScroll} from "@toon.rombaut/EzSmoothScroll";
+
+//Get your html elements
+const container = document.querySelector(".scroll-container");
+const scrollContent = document.querySelector(".scroll-content");
+
+//Initialize
+const ezSmoothScroll = new EzSmoothScroll({
+    container: container,
+    scrollContent: scrollContent,
+    ease: 0.1,
+    disableRaf: true
+});
+
+//render function,
+render = () => {
+    ezSmoothScroll.update();
+    //do you other stuff here
+
+    requestAnimationFrame(render);
+}
+//kickstart your own external RAF loop
+render();
+```
 
 ## Support
 I appreciate all feedback and comments.

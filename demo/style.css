@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color:black;
+    font-size:64px;
+    text-align: center;
+}
+button{
+    border:none;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    background-color: black;
+    color:white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+section button{
+    margin-top:2rem;
+}
+.props{
+    position:fixed;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0.5rem;
+    z-index: 1;
+    max-width: 50%;
+
+}
+input{
+    width:100%;
+}
+.props p {
+    color:white;
+    padding:0.25rem;
+    font-size: 12px;
+}

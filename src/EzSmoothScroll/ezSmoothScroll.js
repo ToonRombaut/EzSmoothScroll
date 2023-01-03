@@ -95,20 +95,28 @@ export default class EzSmoothScroll{
     getSpeedTarget = () => {
         return this.speedTarget;
     }
+    destroy = () => {
+        window.removeEventListener("resize", this.setSize);
+        this.scrollContent.removeEventListener("wheel", this.onWheel);
+        this.scrollContent.removeEventListener("touchmove", this.onTouchmove);
+        this.scrollContent.removeEventListener("touchend", this.onTouchend);
+    }
     initEvents = () => {
         this.initResizeEvent();
         this.initWheelEvent();
         this.initTouchEvents();
         //remove events on unload
         window.addEventListener("unload", () => {
-            window.removeEventListener("resize", this.setSize);
-            window.removeEventListener("wheel", this.onWheel);
-            window.removeEventListener("touchmove", this.onTouchmove);
-            window.removeEventListener("touchend", this.onTouchend);
+            this.destroy();
         })
     }
     initResizeEvent = () => {
         window.addEventListener("resize", this.setSize);
+        const resizeObserver = new ResizeObserver(() => {
+            this.setSize();
+        });
+        resizeObserver.observe(this.container);
+        resizeObserver.observe(this.scrollContent);
     }
     initWheelEvent = () => {
         this.scrollContent.addEventListener("wheel", this.onWheel);
@@ -127,6 +135,7 @@ export default class EzSmoothScroll{
         this.scrollContent.style.pointerEvents = "auto";
     }
     onWheel = e => {
+        console.log("wheel event")
         this.container.scrollTop += -e.wheelDeltaY;
     }
     lerp = (a,b,n) =>{

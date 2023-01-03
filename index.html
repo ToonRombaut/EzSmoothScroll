@@ -2,12 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="/demo/style.css">
+    <title>EzSmoothScroll demo</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/index.js"></script>
+    <div id="app">
+      <div class="props">
+          <p>scrollToRender: <span id="scrollToRender">0</span>px</p>
+          <p>scrollTarget: <span id="scrollTarget">0</span>px</p>
+          <p>speed: <span id="speed">0</span></p>
+          <p>speedTarget: <span id="speedTarget">0</span></p>
+          <p style="padding-bottom:0;">Easing is a value greater than 0 and less than 1</p>
+          <p style="padding-top:0">ease: <input id="ease" /> <button id="btnEase">Set</button></p>
+      </div>
+      <div class="scroll-container">
+        <div class="scroll-content">
+          <section>
+            <h1>Page 1</h1>
+            <button id="scrollDown">Scroll to page 2</button>
+          </section>
+          <section>
+            <h1>Page 2</h1>
+          </section>
+          <section>
+            <h1>Page 3</h1>
+          </section>
+          <section>
+            <h1>Page 4</h1>
+          </section>
+          <section>
+            <h1>Page 5</h1>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script defer type="module" src="/demo/index.js"></script>
   </body>
 </html>
