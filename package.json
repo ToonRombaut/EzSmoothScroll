@@ -14,7 +14,7 @@
       "require": "./dist/ez-smooth-scroll.umd.cjs"
     }
   },
-  "keywords": [],
+  "keywords": ["smooth scroll", "smooth-scroll", "scroll", "smooth"],
   "author": "Toon Rombaut <toon.rombaut@hotmail.com> (https://toonrombaut.be)",
   "license": "MIT",
   "scripts": {
