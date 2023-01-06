@@ -111,7 +111,7 @@ export default class EzSmoothScroll{
         })
     }
     initResizeEvent = () => {
-        window.addEventListener("resize", this.setSize);
+        window.addEventListener("resize", this.setSize, {passive:true});
         const resizeObserver = new ResizeObserver(() => {
             this.setSize();
         });
@@ -119,11 +119,11 @@ export default class EzSmoothScroll{
         resizeObserver.observe(this.scrollContent);
     }
     initWheelEvent = () => {
-        this.scrollContent.addEventListener("wheel", this.onWheel);
+        this.scrollContent.addEventListener("wheel", this.onWheel,{passive:true});
     }
     initTouchEvents = () => {
-        this.scrollContent.addEventListener("touchmove", this.onTouchmove);
-        this.scrollContent.addEventListener("touchend", this.onTouchend);
+        this.scrollContent.addEventListener("touchmove", this.onTouchmove,{passive:true});
+        this.scrollContent.addEventListener("touchend", this.onTouchend,{passive:true});
     }
     onTouchmove = () => {
         if(this.isMoving) return;
