@@ -1,6 +1,6 @@
 {
   "name": "@toon.rombaut/ez-smooth-scroll",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A smoothscroll library that adds inertia scrolling to your website.",
   "type": "module",
   "files": [
