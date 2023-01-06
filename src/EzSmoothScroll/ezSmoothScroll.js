@@ -122,8 +122,8 @@ export default class EzSmoothScroll{
         this.scrollContent.addEventListener("wheel", this.onWheel,{passive:true});
     }
     initTouchEvents = () => {
-        this.scrollContent.addEventListener("touchmove", this.onTouchmove,{passive:true});
-        this.scrollContent.addEventListener("touchend", this.onTouchend,{passive:true});
+        this.scrollContent.addEventListener("touchmove", this.onTouchmove);
+        this.scrollContent.addEventListener("touchend", this.onTouchend);
     }
     onTouchmove = () => {
         if(this.isMoving) return;
