@@ -135,7 +135,6 @@ export default class EzSmoothScroll{
         this.scrollContent.style.pointerEvents = "auto";
     }
     onWheel = e => {
-        console.log("wheel event")
         this.container.scrollTop += -e.wheelDeltaY;
     }
     lerp = (a,b,n) =>{
