@@ -28,7 +28,7 @@ document.querySelector("#scrollDown").addEventListener("click", () => {
 document.querySelector("#btnEase").addEventListener('click', () => {
     ezSmoothScroll.destroy();
     let newEase = Number.parseFloat(ease.value);
-    if(isNaN(newEase)) newEase = 0.075
+    if(isNaN(newEase)) newEase = 0.75
     if(newEase >= 1) newEase = 0.99;
     if(newEase <= 0) newEase = 0.01;
     ease.value = newEase
@@ -47,7 +47,7 @@ const s = document.querySelector(".scroll-content");
 let ezSmoothScroll = new EzSmoothScroll({
     container: c,
     scrollContent: s,
-    ease: 0.075,
+    ease: 0.75,
     disableRaf:true
 });
 

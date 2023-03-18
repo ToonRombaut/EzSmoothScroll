@@ -48,7 +48,7 @@ const scrollContent = document.querySelector(".scroll-content");
 const ezSmoothScroll = new EzSmoothScroll({
     container: container,
     scrollContent: scrollContent,
-    ease: 0.1,
+    ease: 0.75,
     disableRaf: false
 });
 ```
@@ -62,7 +62,7 @@ ezSmoothScroll.destroy();
 | ------ | ------ | ------ | ------ | ------ |
 | container | HTMLElement | Yes | / | The scroll container HTML element. Parent of the scrollContent HTML element. |
 | scrollContent | HTMLElement | Yes | / | The HTML element that contains your HTML. |
-| ease | Number | No | 0.1 | The ease amount for the transform lerp. |
+| ease | Number | No | 0.75 | The ease amount for the transform lerp. |
 | disableRaf | Boolean | No | false | Disable the internal RAF loop to use your own external RAF loop. Can be used to increase performance.
 
 ## Properties
@@ -106,7 +106,7 @@ const scrollContent = document.querySelector(".scroll-content");
 const ezSmoothScroll = new EzSmoothScroll({
     container: container,
     scrollContent: scrollContent,
-    ease: 0.1,
+    ease: 0.75,
     disableRaf: true
 });
 

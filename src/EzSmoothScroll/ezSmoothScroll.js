@@ -22,7 +22,7 @@ export default class EzSmoothScroll{
         //vars
         this.scrollToRender = 0;
         this.scrollTarget = 0;
-        this.ease = options.ease ?? 0.1;
+        this.ease = options.ease ?? 0.75;
         this.speed = 0;
         this.speedTarget = 0;
         this.isMoving = false;
@@ -30,6 +30,7 @@ export default class EzSmoothScroll{
         this.initEvents();
         //css
         this.addStyles();
+        this.time = performance.now();
         if(!options.disableRaf) requestAnimationFrame(this.render);
     }
     addStyles = () => {
@@ -137,14 +138,17 @@ export default class EzSmoothScroll{
     onWheel = e => {
         this.container.scrollTop += -e.wheelDeltaY;
     }
-    lerp = (a,b,n) =>{
-        return (1 - n ) * a+n*b;
+    lerp = (current,target,factor,delta) =>{
+        let frameAwareFactor = 1 - Math.pow(factor,delta/100);
+        return  current * (1-frameAwareFactor) +target * frameAwareFactor;
     }
     update = () => {
+        const delta = performance.now() - this.time;
+        this.time = performance.now();
         this.speed = Math.min(Math.abs(this.scrollTarget-this.scrollToRender),200)/200;
         this.speedTarget += (this.speed - this.speedTarget) * .2;      
         this.scrollTarget = this.getScrollTarget();
-        this.scrollToRender = this.lerp(this.scrollToRender, this.scrollTarget, this.ease);
+        this.scrollToRender = this.lerp(this.scrollToRender, this.scrollTarget, this.ease,delta);
         this.setPosition();
     }
     setPosition = () => {
